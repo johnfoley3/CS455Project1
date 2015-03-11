@@ -4,9 +4,7 @@ import javax.crypto.spec.SecretKeySpec;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
+import java.security.*;
 import java.util.Random;
 
 class Foley {
@@ -63,7 +61,7 @@ class Foley {
 
         try {
 
-            // Generate AES key from random byte code
+            // Generate DES key from random byte code
             SecretKeySpec keySpec = new SecretKeySpec(key8, "DES");
 
             Cipher DESCipher = Cipher.getInstance("DES/CBC/PKCS5Padding");
@@ -126,7 +124,7 @@ class Foley {
 
         try {
 
-            // Generate AES key from random byte code
+            // Generate DESede key from random byte code
             SecretKeySpec keySpec = new SecretKeySpec(key21, "DESede");
 
             Cipher DES3Cipher = Cipher.getInstance("DESede/CBC/NoPadding");
@@ -247,21 +245,17 @@ class Foley {
         // Start timer
         long startTime = System.nanoTime();
 
-        // Initialize key containers
-        byte[] key32 = new byte[32];
         byte[] output;
-
-        // Fill with random bytes
-        new Random().nextBytes(key32 );
 
         try {
 
-            // Generate AES key from random byte code
-            SecretKeySpec keySpec = new SecretKeySpec(key32, "RSA");
+            final KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
+            keyGen.initialize(512);
+            final KeyPair key = keyGen.generateKeyPair();
 
             Cipher RSACipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
 
-            RSACipher.init(Cipher.ENCRYPT_MODE, keySpec);
+            RSACipher.init(Cipher.ENCRYPT_MODE, key.getPublic());
 
             // Encrypts using 128 bit block as per specification
             output = RSACipher.doFinal(baos.toByteArray());
