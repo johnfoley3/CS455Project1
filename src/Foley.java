@@ -68,16 +68,17 @@ class Foley {
 
     public static void encryptAES(ByteArrayOutputStream baos) {
 
-        // Initialize key containers
-        byte[] key256 = new byte[256];
-        byte[] output = new byte[baos.size()];
+        // Initialize key containers, 32 bytes = 256 bits
+        byte[] key32 = new byte[32];
+        byte[] output;
 
         // Fill with random bytes
-        new Random().nextBytes(key256);
+        new Random().nextBytes(key32);
 
         try {
 
-            SecretKeySpec keySpec = new SecretKeySpec(key256, "AES");
+            // Generate AES key from random byte code
+            SecretKeySpec keySpec = new SecretKeySpec(key32, "AES");
 
             Cipher AESCipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
 
