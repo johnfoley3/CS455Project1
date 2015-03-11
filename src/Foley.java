@@ -7,8 +7,16 @@ import java.io.*;
 import java.security.*;
 import java.util.Random;
 
+/**
+ * @author John Foley
+ * @class Foley
+ */
 class Foley {
 
+    /**
+     * Main function
+     * @param args
+     */
     public static void main(String[] args) {
 
         BufferedImage targetImage;
@@ -47,6 +55,11 @@ class Foley {
         }
     }
 
+    /**
+     * encryptDES
+     * Encrypts a target image (in buffered image form) using DES encryption
+     * @param baos
+     */
     public static void encryptDES(ByteArrayOutputStream baos) {
 
         // Start timer
@@ -110,6 +123,11 @@ class Foley {
         }
     }
 
+    /**
+     * encrypt 3DES
+     * Encrypts a target image (in buffered image form) using 3DES encryption
+     * @param baos
+     */
     public static void encrypt3DES(ByteArrayOutputStream baos) {
 
         // Start timer
@@ -177,6 +195,11 @@ class Foley {
         }
     }
 
+    /**
+     * encryptAES
+     * Encrypts a target image (in buffered image form) using AES encryption
+     * @param baos
+     */
     public static void encryptAES(ByteArrayOutputStream baos) {
 
         // Start timer
@@ -240,6 +263,11 @@ class Foley {
         }
     }
 
+    /**
+     * EncryptRSA
+     * Encrypts a target image (in buffered image form) using RSA encryption
+     * @param baos
+     */
     public static void encryptRSA(ByteArrayOutputStream baos) {
 
         // Start timer
