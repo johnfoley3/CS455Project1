@@ -41,7 +41,7 @@ public class TimesWriter {
     public void recordTime(String algorithm, long time) {
 
         try {
-            String fileName = "C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\Times.txt";
+            String fileName = "C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\docs\\Times.txt";
             algorithm += " ";
             String newLine = "\n";
 
