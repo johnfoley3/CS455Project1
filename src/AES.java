@@ -55,7 +55,7 @@ public class AES {
                     new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\img\\AES.jpg");
 
             FileOutputStream outputFile_txt =
-                    new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\AES.txt");
+                    new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\docs\\AES.txt");
 
             outputFile_txt.write(output);
             outputFile_txt.close();

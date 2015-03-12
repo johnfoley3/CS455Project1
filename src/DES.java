@@ -55,7 +55,7 @@ public class DES {
                     new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\img\\DES.jpg");
 
             FileOutputStream outputFile_txt =
-                    new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\DES.txt");
+                    new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\docs\\DES.txt");
 
             outputFile_txt.write(output);
             outputFile_txt.close();

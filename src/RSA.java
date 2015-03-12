@@ -66,7 +66,7 @@ public class RSA {
                     new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\img\\RSA.jpg");
 
             FileOutputStream outputFile_txt =
-                    new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\RSA.txt");
+                    new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\docs\\RSA.txt");
 
             outputFile_txt.write(output);
             outputFile_txt.close();
