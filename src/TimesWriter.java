@@ -17,7 +17,7 @@ public class TimesWriter {
     public TimesWriter() {
 
         try {
-            String fileName = "C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\Times.txt";
+            String fileName = "C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\docs\\Times.txt";
             Date date = new Date();
             String header = "\n" + new Timestamp(date.getTime()) + "\n";
 
