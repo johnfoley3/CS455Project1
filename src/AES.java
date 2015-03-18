@@ -3,10 +3,8 @@ import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
-import java.io.ByteArrayOutputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import javax.imageio.ImageIO;
+import java.io.*;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Random;
@@ -59,6 +57,10 @@ public class AES {
 
             outputFile_txt.write(output);
             outputFile_txt.close();
+
+	        OutputStream outputWriter = new ByteArrayOutputStream();
+
+	        ImageIO.write(outputFile_jpg, "JPG", outputWriter.write(output));
 
             outputFile_jpg.write(output);
             outputFile_jpg.close();

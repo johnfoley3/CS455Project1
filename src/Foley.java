@@ -25,6 +25,19 @@ class Foley {
 
             // Read the image, then pipe to byte array
             targetImage = ImageIO.read(targetFile);
+	        int imageHeight = targetImage.getHeight();
+	        int imageWidth = targetImage.getWidth();
+
+	        int[][] imageMatrix = new int[imageHeight][imageWidth];
+
+	        for (int i = 0; i < imageHeight; i++) {
+
+		        for (int j = 0; j < imageWidth; j++) {
+
+			        imageMatrix[i][j] = targetImage.getRGB(j, i);
+		        }
+	        }
+
             ImageIO.write(targetImage, "jpg", baos);
 
             TimesWriter timer = new TimesWriter();
