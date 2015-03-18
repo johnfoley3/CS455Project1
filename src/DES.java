@@ -20,8 +20,8 @@ public class DES {
 
     /**
      * Constructor
-     * @param baos
-     * @param timer
+     * @param baos Byte array output stream that contains clear text
+     * @param timer Times writer used to write the times to the file
      */
     public DES(ByteArrayOutputStream baos, TimesWriter timer) {
 
@@ -52,10 +52,10 @@ public class DES {
             timer.recordTime("DES", endTime-startTime);
 
             FileOutputStream outputFile_jpg =
-                    new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\img\\DES.jpg");
+                    new FileOutputStream("img/DES.jpg");
 
             FileOutputStream outputFile_txt =
-                    new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\docs\\DES.txt");
+                    new FileOutputStream("docs/DES.txt");
 
             outputFile_txt.write(output);
             outputFile_txt.close();

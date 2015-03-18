@@ -21,8 +21,8 @@ public class RSA {
 
     /**
      * Constructor
-     * @param baos
-     * @param timer
+     * @param baos Contains the clear text
+     * @param timer Writes the run time to file
      */
     public RSA(ByteArrayOutputStream baos, TimesWriter timer) {
 
@@ -63,10 +63,10 @@ public class RSA {
             timer.recordTime("RSA", endTime-startTime);
 
             FileOutputStream outputFile_jpg =
-                    new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\img\\RSA.jpg");
+                    new FileOutputStream("img/RSA.jpg");
 
             FileOutputStream outputFile_txt =
-                    new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\docs\\RSA.txt");
+                    new FileOutputStream("docs/RSA.txt");
 
             outputFile_txt.write(output);
             outputFile_txt.close();

@@ -22,8 +22,8 @@ public class DESede {
 
     /**
      * Constructor
-     * @param baos
-     * @param timer
+     * @param baos Contains the clear text
+     * @param timer  Writes the run time to file
      */
     public DESede(ByteArrayOutputStream baos, TimesWriter timer) {
 
@@ -55,10 +55,10 @@ public class DESede {
             timer.recordTime("3DES", endTime-startTime);
 
             FileOutputStream outputFile_jpg =
-                    new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\img\\3DES.jpg");
+                    new FileOutputStream("img/3DES.jpg");
 
             FileOutputStream outputFile_txt =
-                    new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\docs\\3DES.txt");
+                    new FileOutputStream("docs/3DES.txt");
 
             outputFile_txt.write(output);
             outputFile_txt.close();

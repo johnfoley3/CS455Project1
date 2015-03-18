@@ -20,8 +20,8 @@ public class AES {
 
     /**
      * Constructor
-     * @param baos
-     * @param timer
+     * @param baos Contains the clear text
+     * @param timer Writes the run time execution times
      */
     public AES(ByteArrayOutputStream baos, TimesWriter timer) {
 
@@ -52,10 +52,10 @@ public class AES {
             timer.recordTime("AES", endTime-startTime);
 
             FileOutputStream outputFile_jpg =
-                    new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\img\\AES.jpg");
+                    new FileOutputStream("img/AES.jpg");
 
             FileOutputStream outputFile_txt =
-                    new FileOutputStream("C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\docs\\AES.txt");
+                    new FileOutputStream("docs/AES.txt");
 
             outputFile_txt.write(output);
             outputFile_txt.close();

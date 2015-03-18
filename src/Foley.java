@@ -4,19 +4,19 @@ import java.io.*;
 
 /**
  * @author John Foley
- * @class Foley
+ * Main driver class
  */
 class Foley {
 
     /**
      * Main function
-     * @param args
+     * @param args Arguments given at command line
      */
     public static void main(String[] args) {
 
         BufferedImage targetImage;
 
-        String imgPath = "C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\img\\Target.jpg";
+        String imgPath = "img/Target.jpg";
 		File targetFile = new File(imgPath);
 
         ByteArrayOutputStream baos = new ByteArrayOutputStream();

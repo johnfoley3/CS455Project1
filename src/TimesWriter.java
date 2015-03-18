@@ -5,7 +5,7 @@ import java.util.Date;
 import java.sql.Timestamp;
 
 /**
- * Created by John on 3/12/2015.
+ * Class to write the run times to file
  */
 public class TimesWriter {
 
@@ -17,7 +17,7 @@ public class TimesWriter {
     public TimesWriter() {
 
         try {
-            String fileName = "C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\docs\\Times.txt";
+            String fileName = "docs/Times.txt";
             Date date = new Date();
             String header = "\n" + new Timestamp(date.getTime()) + "\n";
 
@@ -35,13 +35,13 @@ public class TimesWriter {
 
     /**
      * Writes the time to a file
-     * @param algorithm
-     * @param time
+     * @param algorithm Name of the algorithm to write for
+     * @param time Time to write
      */
     public void recordTime(String algorithm, long time) {
 
         try {
-            String fileName = "C:\\Users\\John\\IdeaProjects\\CS455Project1\\src\\docs\\Times.txt";
+            String fileName = "docs/Times.txt";
             algorithm += " ";
             String newLine = "\n";
 
